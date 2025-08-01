@@ -5,10 +5,7 @@ from services.llm_service import ask_llm
 
 from fastapi import APIRouter, Depends, HTTPException, status
 
-
 router = APIRouter(prefix="/")
-
-AIRPORTS = ["DXB", "LHR", "CDG", "SIN", "HKG", "AMS"]
 
 def create_app() -> FastAPI:
     @router.post("/ask", response_class=HTMLResponse)
