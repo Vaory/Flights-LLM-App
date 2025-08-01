@@ -1,7 +1,7 @@
 import os
 import requests
 
-FLIGHT_API_KEY = "68879659cc317c59cd596503"
+FLIGHT_API_KEY = os.getenv("FLIGHT_API_KEY")
 FLIGHT_API_URL = "https://api.flightapi.io/schedule" + "/" + FLIGHT_API_KEY
 
 async def get_flight_data(airport_code: str):
